@@ -1,0 +1,90 @@
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# OS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+*.egg-info/
+dist/
+build/
+
+# Django
+*.log
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+celerybeat-schedule.db
+media/
+vector_database/
+
+# Node.js / Next.js
+node_modules/
+/.pnp
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/versions
+/.next/
+/out/
+/build
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+*.tsbuildinfo
+next-env.d.ts
+.vercel
+
+# Credentials and sensitive files
+*.pem
+*.key
+*.json
+!package.json
+!package-lock.json
+!tsconfig.json
+!eslint.config.mjs
+!postcss.config.js
+!next.config.ts
+!tailwind.config.js
+oauth_credentials/
+service_accounts/
+admin_cookies.txt
+cookies.txt
+*.credentials.json
+gcs_credentials.json
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Docker
+.dockerignore
+
+# Logs
+logs/
+*.log
+

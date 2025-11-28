@@ -1,0 +1,52 @@
+version: '3.8'
+
+services:
+  # Redis for caching and sessions
+  redis:
+    image: redis:7-alpine
+    container_name: django_redis
+    restart: unless-stopped
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    command: redis-server --appendonly yes
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - django_network
+
+  # RabbitMQ for Celery message broker
+  rabbitmq:
+    image: rabbitmq:3-management
+    container_name: django_rabbitmq
+    restart: unless-stopped
+    environment:
+      RABBITMQ_DEFAULT_USER: ${RABBITMQ_USER:-admin}
+      RABBITMQ_DEFAULT_PASS: ${RABBITMQ_PASSWORD:-password}
+      RABBITMQ_DEFAULT_VHOST: ${RABBITMQ_VHOST:-/}
+    ports:
+      - "5672:5672"    # AMQP port
+      - "15672:15672"  # Management UI
+    volumes:
+      - rabbitmq_data:/var/lib/rabbitmq
+    healthcheck:
+      test: ["CMD", "rabbitmq-diagnostics", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - django_network
+
+volumes:
+  redis_data:
+    driver: local
+  rabbitmq_data:
+    driver: local
+
+networks:
+  django_network:
+    driver: bridge

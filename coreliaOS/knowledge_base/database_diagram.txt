@@ -1,0 +1,252 @@
+erDiagram
+    User {
+        int id PK
+        string username
+        string email
+        string first_name
+        string last_name
+        datetime date_joined
+        boolean is_active
+        boolean is_staff
+        boolean is_superuser
+    }
+    
+    KnowledgeBaseConfig {
+        int id PK
+        int user_id FK
+        string default_embedding_model
+        int default_chunk_size
+        int default_chunk_overlap
+        int document_retention_days
+        int conversation_retention_days
+        float default_similarity_threshold
+        int max_search_results
+        boolean sync_notifications
+        boolean error_notifications
+        string openai_api_key
+        string anthropic_api_key
+        string cohere_api_key
+        datetime created_at
+        datetime updated_at
+    }
+    
+    DataSource {
+        uuid id PK
+        int user_id FK
+        string name
+        string source_type
+        string status
+        json config
+        json credentials
+        boolean auto_sync
+        int sync_frequency
+        datetime last_sync
+        datetime created_at
+        datetime updated_at
+    }
+    
+    FileType {
+        int id PK
+        string name
+        string category
+        json mime_types
+        json extensions
+        json parsers
+        json embedding_models
+        boolean is_active
+        datetime created_at
+        datetime updated_at
+    }
+    
+    Document {
+        uuid id PK
+        int user_id FK
+        uuid data_source_id FK
+        int file_type_id FK
+        string title
+        string original_filename
+        string file_path
+        bigint file_size
+        string mime_type
+        text raw_content
+        text processed_content
+        string status
+        json processing_log
+        json source_metadata
+        datetime expires_at
+        datetime soft_deleted_at
+        datetime created_at
+        datetime updated_at
+    }
+    
+    DocumentChunk {
+        uuid id PK
+        uuid document_id FK
+        text content
+        int chunk_index
+        json embeddings
+        json metadata
+        datetime created_at
+    }
+    
+    AIAgent {
+        uuid id PK
+        int user_id FK
+        string name
+        text description
+        string agent_type
+        string model_provider
+        string model_name
+        json model_parameters
+        string conversation_mode
+        int context_window
+        int memory_retention_days
+        text system_prompt
+        text user_prompt_template
+        int max_documents
+        float similarity_threshold
+        int rate_limit_per_hour
+        int rate_limit_per_day
+        json domain_keywords
+        json expertise_areas
+        boolean is_active
+        datetime created_at
+        datetime updated_at
+    }
+    
+    AIAgent_DataSources {
+        int id PK
+        uuid aiagent_id FK
+        uuid datasource_id FK
+    }
+    
+    AIAgent_FileTypes {
+        int id PK
+        uuid aiagent_id FK
+        int filetype_id FK
+    }
+    
+    Conversation {
+        uuid id PK
+        int user_id FK
+        uuid agent_id FK
+        string title
+        json context
+        datetime created_at
+        datetime updated_at
+    }
+    
+    Message {
+        uuid id PK
+        uuid conversation_id FK
+        string role
+        text content
+        json metadata
+        datetime created_at
+    }
+    
+    Message_CitedDocuments {
+        int id PK
+        uuid message_id FK
+        uuid document_id FK
+    }
+    
+    AgentUsage {
+        uuid id PK
+        int user_id FK
+        uuid agent_id FK
+        int tokens_used
+        decimal cost
+        float response_time
+        json request_data
+        datetime created_at
+    }
+    
+    %% Relationships
+    User ||--o{ KnowledgeBaseConfig : "has"
+    User ||--o{ DataSource : "owns"
+    User ||--o{ Document : "owns"
+    User ||--o{ AIAgent : "creates"
+    User ||--o{ Conversation : "participates"
+    User ||--o{ AgentUsage : "generates"
+    
+    DataSource ||--o{ Document : "contains"
+    FileType ||--o{ Document : "categorizes"
+    
+    Document ||--o{ DocumentChunk : "split_into"
+    Document ||--o{ Message_CitedDocuments : "cited_in"
+    
+    AIAgent ||--o{ Conversation : "handles"
+    AIAgent ||--o{ AgentUsage : "tracked_for"
+    AIAgent ||--o{ AIAgent_DataSources : "accesses"
+    AIAgent ||--o{ AIAgent_FileTypes : "processes"
+    
+    DataSource ||--o{ AIAgent_DataSources : "accessed_by"
+    FileType ||--o{ AIAgent_FileTypes : "processed_by"
+    
+    Conversation ||--o{ Message : "contains"
+    Message ||--o{ Message_CitedDocuments : "cites"
+    
+    %% Indexes and Constraints
+    User {
+        UNIQUE username
+        UNIQUE email
+        INDEX username
+        INDEX email
+    }
+    
+    KnowledgeBaseConfig {
+        UNIQUE user_id
+        INDEX user_id
+    }
+    
+    DataSource {
+        UNIQUE user_id_name
+        INDEX user_id
+        INDEX source_type
+        INDEX status
+        INDEX created_at
+    }
+    
+    Document {
+        INDEX user_id_status
+        INDEX data_source_id_created_at
+        INDEX status
+        INDEX created_at
+        INDEX expires_at
+        INDEX soft_deleted_at
+    }
+    
+    DocumentChunk {
+        UNIQUE document_id_chunk_index
+        INDEX document_id
+        INDEX created_at
+    }
+    
+    AIAgent {
+        UNIQUE user_id_name
+        INDEX user_id
+        INDEX agent_type
+        INDEX model_provider
+        INDEX is_active
+        INDEX created_at
+    }
+    
+    Conversation {
+        INDEX user_id
+        INDEX agent_id
+        INDEX created_at
+        INDEX updated_at
+    }
+    
+    Message {
+        INDEX conversation_id
+        INDEX role
+        INDEX created_at
+    }
+    
+    AgentUsage {
+        INDEX user_id_created_at
+        INDEX agent_id_created_at
+        INDEX created_at
+    }
