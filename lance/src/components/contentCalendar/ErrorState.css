@@ -1,0 +1,120 @@
+.error-state {
+  text-align: center;
+  padding: 3rem 2rem;
+  color: #6b7280;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.error-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.error-state h3 {
+  color: #dc2626;
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.error-details {
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  margin: 1.5rem 0;
+  text-align: left;
+}
+
+.error-message {
+  color: #dc2626;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.error-stack {
+  margin-top: 1rem;
+}
+
+.error-stack summary {
+  cursor: pointer;
+  font-weight: 500;
+  color: #991b1b;
+  margin-bottom: 0.5rem;
+}
+
+.error-stack pre {
+  background: #fee2e2;
+  padding: 0.75rem;
+  border-radius: 0.25rem;
+  font-size: 0.75rem;
+  line-height: 1.4;
+  overflow-x: auto;
+  color: #7f1d1d;
+  margin-top: 0.5rem;
+}
+
+.error-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin: 2rem 0;
+  flex-wrap: wrap;
+}
+
+.retry-button {
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.2s;
+  font-size: 0.875rem;
+}
+
+.retry-button.primary {
+  background-color: #6366f1;
+  color: white;
+}
+
+.retry-button.primary:hover {
+  background-color: #4f46e5;
+}
+
+.retry-button.secondary {
+  background-color: #f3f4f6;
+  color: #374151;
+  border: 1px solid #d1d5db;
+}
+
+.retry-button.secondary:hover {
+  background-color: #e5e7eb;
+  border-color: #9ca3af;
+}
+
+.error-help {
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  text-align: left;
+  margin-top: 2rem;
+}
+
+.error-help p {
+  font-weight: 500;
+  color: #374151;
+  margin-bottom: 0.75rem;
+}
+
+.error-help ul {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+  color: #6b7280;
+}
+
+.error-help li {
+  margin-bottom: 0.25rem;
+  font-size: 0.875rem;
+}

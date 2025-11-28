@@ -1,0 +1,402 @@
+.canvas-builder {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background: #f8fafc;
+  overflow: hidden;
+}
+
+.canvas-builder-header {
+  padding: 1.5rem 2rem;
+  background: white;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.canvas-builder-header h2 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #1e293b;
+}
+
+.canvas-builder-header p {
+  margin: 0;
+  color: #64748b;
+  font-size: 0.875rem;
+}
+
+.canvas-builder-content {
+  display: flex;
+  flex: 1;
+  gap: 1rem;
+  overflow: hidden;
+}
+
+.canvas-toolbar {
+  width: 280px;
+  background: white;
+  border-right: 1px solid #e2e8f0;
+  padding: 1.5rem;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.toolbar-section h4 {
+  margin: 0 0 1rem 0;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #374151;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.tool-buttons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem;
+}
+
+.tool-buttons button {
+  padding: 0.5rem 0.75rem;
+  border: 1px solid #d1d5db;
+  background: white;
+  color: #374151;
+  border-radius: 0.375rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.tool-buttons button:hover {
+  background: #f3f4f6;
+  border-color: #9ca3af;
+}
+
+.tool-buttons button.active {
+  background: #3b82f6;
+  border-color: #3b82f6;
+  color: white;
+}
+
+.color-palette {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.color-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.color-item label {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: #374151;
+  text-transform: capitalize;
+}
+
+.color-input-group {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.color-input-group input[type="color"] {
+  width: 32px;
+  height: 32px;
+  border: none;
+  border-radius: 0.375rem;
+  cursor: pointer;
+}
+
+.color-preview {
+  width: 24px;
+  height: 24px;
+  border: 2px solid #d1d5db;
+  border-radius: 4px;
+  transition: all 0.2s;
+}
+
+.color-preview:hover {
+  border-color: #9ca3af;
+  transform: scale(1.05);
+}
+
+.color-description {
+  font-size: 0.75rem;
+  color: #6b7280;
+  margin-bottom: 1rem;
+  line-height: 1.4;
+}
+
+.action-description {
+  font-size: 0.75rem;
+  color: #6b7280;
+  margin-top: 1rem;
+  line-height: 1.4;
+}
+
+.action-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.action-buttons button {
+  padding: 0.75rem 1rem;
+  border: none;
+  border-radius: 0.375rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.generate-btn {
+  background: #10b981;
+  color: white;
+}
+
+.generate-btn:hover {
+  background: #059669;
+}
+
+.clear-btn {
+  background: #ef4444;
+  color: white;
+}
+
+.clear-btn:hover {
+  background: #dc2626;
+}
+
+.export-btn {
+  background: #8b5cf6;
+  color: white;
+}
+
+.export-btn:hover {
+  background: #7c3aed;
+}
+
+.canvas-container {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  background: #f1f5f9;
+  overflow: auto;
+}
+
+.main-canvas {
+  border: 2px solid #e2e8f0;
+  border-radius: 0.5rem;
+  background: white;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  cursor: crosshair;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.main-canvas:hover {
+  border-color: #3b82f6;
+}
+
+.info-panel {
+  width: 280px;
+  background: white;
+  border-left: 1px solid #e2e8f0;
+  padding: 1.5rem;
+  overflow-y: auto;
+}
+
+.info-panel h4 {
+  margin: 0 0 1rem 0;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #374151;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.info-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.75rem;
+  padding: 0.5rem;
+  background: #f9fafb;
+  border-radius: 0.375rem;
+}
+
+.info-item label {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: #374151;
+}
+
+.info-item span {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #1f2937;
+  font-family: monospace;
+}
+
+.template-preview-info {
+  margin-top: 2rem;
+  padding: 1rem;
+  background: #f0f9ff;
+  border-radius: 0.5rem;
+  border-left: 4px solid #3b82f6;
+}
+
+.template-preview-info h5 {
+  margin: 0 0 0.75rem 0;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #1e40af;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.template-preview-info ul {
+  margin: 0;
+  padding-left: 1rem;
+  list-style: none;
+}
+
+.template-preview-info li {
+  font-size: 0.75rem;
+  color: #1e40af;
+  margin-bottom: 0.5rem;
+  position: relative;
+}
+
+.template-preview-info li::before {
+  content: "→";
+  position: absolute;
+  left: -1rem;
+  color: #3b82f6;
+  font-weight: bold;
+}
+
+@media (max-width: 1024px) {
+  .canvas-builder-content {
+    flex-direction: column;
+  }
+
+  .canvas-toolbar {
+    width: 100%;
+    flex-direction: row;
+    gap: 1rem;
+    overflow-x: auto;
+    padding: 1rem;
+  }
+
+  .toolbar-section {
+    min-width: 200px;
+  }
+
+  .info-panel {
+    width: 100%;
+    max-height: 250px;
+  }
+
+  .canvas-container {
+    min-height: 400px;
+  }
+}
+
+@media (max-width: 768px) {
+  .canvas-builder-header {
+    padding: 1rem;
+  }
+
+  .canvas-builder-header h2 {
+    font-size: 1.25rem;
+  }
+
+  .tool-buttons {
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 0.25rem;
+  }
+
+  .tool-buttons button {
+    padding: 0.5rem;
+    font-size: 0.7rem;
+  }
+
+  .canvas-container {
+    padding: 1rem;
+  }
+}
+
+.canvas-builder.loading {
+  opacity: 0.7;
+  pointer-events: none;
+}
+
+.canvas-builder.loading .main-canvas {
+  cursor: wait;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.properties-panel {
+  animation: fadeIn 0.3s ease-out;
+}
+
+.toolbar-section {
+  animation: fadeIn 0.3s ease-out;
+}
+
+.canvas-container::before {
+  content: "Click to add shapes or select existing ones";
+  position: absolute;
+  top: 2.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(59, 130, 246, 0.9);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 0.375rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  z-index: 10;
+  opacity: 0;
+  transition: opacity 0.3s;
+  pointer-events: none;
+}
+
+.canvas-container:hover::before {
+  opacity: 1;
+}
+
+.canvas-builder-header::after {
+  content: attr(data-shape-count) " shapes";
+  position: absolute;
+  right: 2rem;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #e2e8f0;
+  padding: 0.25rem 0.75rem;
+  border-radius: 1rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: #64748b;
+}

@@ -1,0 +1,285 @@
+/* Brand Profile Page Styles */
+.brand-profile-container {
+  width: 100%;
+  height: 100vh;
+  background-color: #101010;
+  display: flex;
+}
+
+.brand-profile-left-panel {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 0 80px;
+}
+
+.brand-profile-header {
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding-top: 40px;
+}
+
+.brand-profile-logo {
+  height: 36px;
+  width: 41px;
+}
+
+.brand-profile-brand {
+  color: white;
+  font-size: 32px;
+  font-weight: 500;
+}
+
+.brand-profile-content {
+  height: 90vh;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-left: 60px;
+  margin-top: 60px;
+}
+
+.brand-profile-title {
+  color: white;
+  font-size: 3rem;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.brand-profile-subtitle {
+  color: #9ca3af;
+  font-size: 1.125rem;
+  margin-bottom: 40px;
+  margin-right: -40px;
+}
+
+.brand-profile-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 70%;
+}
+
+.brand-profile-error {
+  color: #ef4444;
+  font-size: 0.875rem;
+  margin-bottom: 16px;
+}
+
+.brand-profile-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.brand-profile-label {
+  color: black;
+  font-size: 1.125rem;
+  font-weight: 500;
+}
+
+/* Input styles to override UI component styles */
+.brand-profile-input {
+  background-color: transparent;
+  border: 2px solid #4b5563;
+  color: white;
+  padding: 12px 16px;
+  height: 48px;
+  font-size: 1.125rem;
+  border-radius: 6px;
+  width: 100%;
+}
+
+.brand-profile-input::placeholder {
+  color: #9ca3af;
+}
+
+.brand-profile-input:focus {
+  outline: none;
+  border-color: #8b5cf6;
+  box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.1);
+}
+
+.brand-profile-textarea {
+  background-color: transparent;
+  border: 2px solid #4b5563;
+  color: white;
+  padding: 12px 16px;
+  min-height: 120px;
+  font-size: 1.125rem;
+  border-radius: 6px;
+  width: 100%;
+  resize: vertical;
+}
+
+.brand-profile-textarea::placeholder {
+  color: #9ca3af;
+}
+
+.brand-profile-textarea:focus {
+  outline: none;
+  border-color: #8b5cf6;
+  box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.1);
+}
+
+.brand-profile-button {
+  width: 100%;
+  background-color: white;
+  color: #070719;
+  border: none;
+  height: 56px;
+  font-size: 1.125rem;
+  font-weight: 600;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.brand-profile-button:hover {
+  background-color: #f3f4f6;
+}
+
+.brand-profile-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.brand-profile-footer {
+  text-align: center;
+  color: #d1d5db;
+  font-size: 1rem;
+  margin-top: 32px;
+  width: 70%;
+}
+
+.brand-profile-link {
+  color: white;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.brand-profile-link:hover {
+  color: #a78bfa;
+}
+
+/* Color Picker Styles - Each color on its own row */
+.brand-profile-color-picker {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.brand-profile-color-row {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.brand-profile-color-input {
+  width: 100px;
+  height: 80px;
+  border: 2px solid #4b5563;
+  border-radius: 12px;
+  cursor: pointer;
+  background-color: #fff;
+}
+
+.brand-profile-color-input:focus {
+  outline: none;
+  border-color: #8b5cf6;
+  box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.1);
+}
+
+.brand-profile-hex-input {
+  background-color: #fff;
+  border: 2px solid #4b5563;
+  color: #000;
+  padding: 16px 20px;
+  height: 80px;
+  font-size: 1.5rem;
+  font-weight: 600;
+  border-radius: 12px;
+  width: 250px;
+}
+
+.brand-profile-hex-input::placeholder {
+  color: #a0aec0;
+  font-size: 1.5rem;
+}
+
+.brand-profile-hex-input:focus {
+  outline: none;
+  border-color: #8b5cf6;
+  box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.1);
+}
+
+/* File Upload Styles */
+.brand-profile-file-upload {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.brand-profile-file-input {
+  display: none;
+}
+
+.brand-profile-file-label {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 16px;
+  border: 2px dashed #4b5563;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: border-color 0.2s;
+  color: #9ca3af;
+  font-size: 1rem;
+}
+
+.brand-profile-file-label:hover {
+  border-color: #8b5cf6;
+  color: white;
+}
+
+.brand-profile-file-preview {
+  margin-top: 8px;
+  max-width: 200px;
+  max-height: 200px;
+  border-radius: 6px;
+}
+
+/* Responsive Design */
+@media (max-width: 1280px) {
+  .brand-profile-form {
+    width: 70%;
+  }
+
+  .brand-profile-footer {
+    width: 70%;
+  }
+}
+
+@media (max-width: 768px) {
+  .brand-profile-left-panel {
+    width: 100%;
+    padding: 0 40px;
+  }
+
+  .brand-profile-content {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .brand-profile-form {
+    width: 100%;
+  }
+
+  .brand-profile-footer {
+    width: 100%;
+  }
+}

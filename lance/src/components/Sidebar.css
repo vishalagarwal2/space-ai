@@ -1,0 +1,401 @@
+/* Sidebar Styles */
+.sidebar {
+  width: 280px;
+  height: 100vh;
+  background-color: #fff;
+  border-right: 1px solid #c3c3c3;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 1000;
+  transition: width 0.3s ease;
+  font-family:
+    "Neue Montreal Medium",
+    -apple-system,
+    BlinkMacSystemFont,
+    "SF Pro Text",
+    system-ui,
+    sans-serif;
+}
+
+.sidebar.collapsed {
+  width: 80px;
+}
+
+.sidebar-header {
+  padding: 1.5rem 1rem;
+  border-bottom: 1px solid;
+  border-image: linear-gradient(to right, #fff, #161616, #fff) 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.sidebar-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.sidebar.collapsed .sidebar-header {
+  justify-content: center;
+}
+
+.sidebar.collapsed .sidebar-logo {
+  gap: 0;
+  margin-left: 10px;
+}
+
+.collapse-button {
+  border: none;
+  color: #9ca3af;
+  background-color: transparent;
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 0.375rem;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+}
+
+.sidebar.collapsed .collapse-button {
+  position: static;
+  transform: none;
+  margin: 0 auto;
+  background-color: #ececec;
+  margin-right: -30px;
+}
+
+.sidebar.collapsed .collapse-button:hover {
+  background-color: #1a1a1a;
+  color: #ffffff;
+}
+
+.logo-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-text {
+  font-size: 1.5rem;
+  color: #ff2e01;
+  font-weight: 500;
+  white-space: nowrap;
+  font-family:
+    "Neue Montreal Medium",
+    -apple-system,
+    BlinkMacSystemFont,
+    "SF Pro Text",
+    system-ui,
+    sans-serif;
+}
+
+.collapse-button:hover {
+  background-color: #1a1a1a;
+  color: #ffffff;
+}
+
+.sidebar-nav {
+  flex: 1;
+  padding: 1rem 0;
+}
+
+.nav-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-item {
+  margin: 0.25rem 0;
+}
+
+.nav-button {
+  width: calc(100% - 1.7rem);
+  background: none;
+  border: none;
+  color: #8b9191;
+  padding-left: 1.6rem;
+  padding-right: 1.6rem;
+  padding-top: 0.6rem;
+  padding-bottom: 0.6rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  transition: all 0.2s;
+  text-align: left;
+  font-size: 1rem;
+  font-weight: 500;
+  font-family:
+    "Neue Montreal Medium",
+    -apple-system,
+    BlinkMacSystemFont,
+    "SF Pro Text",
+    system-ui,
+    sans-serif;
+  border-radius: 6px;
+  margin-left: 0.85em;
+  margin-right: 0.85rem;
+  margin-top: 0.3rem;
+  margin-bottom: 0.3rem;
+}
+
+.nav-button:hover {
+  background-color: #ff4f08;
+  color: #ffffff;
+}
+
+.nav-button.active {
+  background-color: #ff4f08;
+  color: #fff;
+}
+
+.nav-button.active .nav-icon svg {
+  fill: #fff;
+}
+
+.nav-button:hover .nav-icon svg {
+  fill: #ffffff;
+}
+
+.nav-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 22px;
+  flex-shrink: 0;
+}
+
+.sidebar.collapsed .nav-icon {
+  margin: 0 auto;
+}
+
+.nav-label {
+  font-family:
+    "Neue Montreal Medium",
+    -apple-system,
+    BlinkMacSystemFont,
+    "SF Pro Text",
+    system-ui,
+    sans-serif !important;
+  font-size: 1.08rem;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.sidebar.collapsed .nav-label {
+  display: none;
+}
+
+.sidebar.collapsed .nav-button {
+  width: calc(100% - 1rem);
+  justify-content: center;
+  padding: 0.6rem 0;
+  margin: 0.3rem 0.5rem;
+  gap: 0;
+}
+
+.sidebar.collapsed .logo-text {
+  display: none;
+}
+
+.sidebar-footer {
+  padding: 1rem;
+  border-top: 1px solid #2a2a2a;
+}
+
+.sidebar.collapsed .sidebar-footer {
+  padding: 1rem 0.5rem;
+}
+
+.user-info-container {
+  position: relative;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem;
+  background-color: #2a2a2a;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.user-info:hover {
+  background-color: #3a3a3a;
+}
+
+.user-avatar {
+  width: 40px;
+  height: 40px;
+  background-color: #1ec3c8;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  flex-shrink: 0;
+}
+
+.user-details {
+  flex: 1;
+  min-width: 0;
+}
+
+.dropdown-arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #9ca3af;
+  transition: transform 0.2s;
+}
+
+.user-info:hover .dropdown-arrow {
+  color: #ffffff;
+}
+
+.user-name {
+  font-family: "Geist Medium";
+  letter-spacing: 0.2px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #ffffff;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.user-role {
+  font-family: "Geist Regular";
+  font-size: 0.75rem;
+  color: #9ca3af;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.sidebar.collapsed .user-info {
+  justify-content: center;
+  padding: 0.5rem;
+  width: 100%;
+}
+
+.sidebar.collapsed .user-details {
+  display: none;
+}
+
+.sidebar.collapsed .dropdown-arrow {
+  display: none;
+}
+
+.sidebar.collapsed .user-avatar {
+  width: 48px;
+  height: 48px;
+}
+
+.sidebar.collapsed .user-info {
+  border-radius: 12px;
+}
+
+/* User Dropdown Styles */
+.user-dropdown {
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  right: 0;
+  background-color: #000000;
+  border: 1px solid #333333;
+  border-radius: 0.5rem;
+  box-shadow:
+    0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  margin-bottom: 0.5rem;
+  z-index: 1000;
+}
+
+.dropdown-item {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem;
+  background: none;
+  border: none;
+  color: #ffffff;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  font-size: 0.875rem;
+  font-weight: 500;
+  text-align: left;
+}
+
+.dropdown-item:hover {
+  background-color: #f87d0d;
+}
+
+.dropdown-item.logout-button {
+  color: #ef4444;
+  transition: color 0.2s ease;
+}
+
+.dropdown-item.logout-button:hover {
+  background-color: #1a1a1a;
+  color: #a78bfa;
+}
+
+.dropdown-item.active {
+  background-color: #1ec3c8;
+  color: #ffffff;
+}
+
+.dropdown-item.active:hover {
+  background-color: #17a2b8;
+}
+
+.profile-avatar {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  flex-shrink: 0;
+}
+
+.dropdown-divider {
+  height: 1px;
+  background-color: #333333;
+  margin: 0.25rem 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 100%;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+  }
+
+  .sidebar.open {
+    transform: translateX(0);
+  }
+
+  .sidebar.collapsed {
+    width: 100%;
+  }
+}

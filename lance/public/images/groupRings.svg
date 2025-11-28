@@ -1,0 +1,27 @@
+<svg width="914" height="976" viewBox="0 0 914 976" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g opacity="0.5">
+<circle cx="-1.02254" cy="-17.1255" r="284.491" transform="rotate(44.0175 -1.02254 -17.1255)" stroke="white" stroke-opacity="0.2"/>
+<circle cx="-1.03902" cy="-18.0894" r="360.038" transform="rotate(104.018 -1.03902 -18.0894)" stroke="white" stroke-opacity="0.2" stroke-width="1.26555"/>
+<ellipse cx="268.277" cy="60.4754" rx="18.5" ry="18.6697" transform="rotate(44.0175 268.277 60.4754)" fill="url(#paint0_radial_78_9)"/>
+<circle cx="263.56" cy="65.357" r="3.56422" transform="rotate(44.0175 263.56 65.357)" fill="white"/>
+<ellipse cx="84.3169" cy="326.166" rx="23.4127" ry="23.6275" transform="rotate(104.018 84.3169 326.166)" fill="url(#paint1_radial_78_9)"/>
+<circle cx="75.9818" cy="324.085" r="4.5107" transform="rotate(104.018 75.9818 324.085)" fill="#4D00E6"/>
+<circle cx="8.77714" cy="-8.01239" r="420.523" transform="rotate(68.3243 8.77714 -8.01239)" stroke="white" stroke-opacity="0.2" stroke-width="1.26555"/>
+<ellipse cx="323.217" cy="268.06" rx="31.9254" ry="32.2183" transform="rotate(68.3243 323.217 268.06)" fill="url(#paint2_radial_78_9)"/>
+<path d="M326.949 273.486C323.793 274.741 320.216 273.199 318.962 270.042C317.707 266.886 319.249 263.309 322.406 262.055C325.563 260.8 329.139 262.342 330.393 265.499C331.648 268.656 330.106 272.232 326.949 273.486Z" fill="#E6A900"/>
+</g>
+<defs>
+<radialGradient id="paint0_radial_78_9" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(268.277 60.4754) rotate(90) scale(18.6697 18.5)">
+<stop stop-color="white" stop-opacity="0.4"/>
+<stop offset="1" stop-color="white" stop-opacity="0"/>
+</radialGradient>
+<radialGradient id="paint1_radial_78_9" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(84.3169 326.166) rotate(90) scale(23.6275 23.4127)">
+<stop stop-color="#0036E6" stop-opacity="0.4"/>
+<stop offset="1" stop-color="white" stop-opacity="0"/>
+</radialGradient>
+<radialGradient id="paint2_radial_78_9" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(323.217 268.06) rotate(90) scale(32.2183 31.9254)">
+<stop stop-color="#E6A900" stop-opacity="0.4"/>
+<stop offset="1" stop-color="white" stop-opacity="0"/>
+</radialGradient>
+</defs>
+</svg>

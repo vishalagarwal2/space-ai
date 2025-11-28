@@ -1,0 +1,52 @@
+.content-calendar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.delete-button {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-right: 36px;
+  padding-left: 36px;
+  background-color: #fff;
+  color: #ef4444;
+  border: 1px solid #dc2626;
+  border-radius: 999px;
+  font-size: 0.92rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.delete-button:hover:not(:disabled) {
+  background-color: #f35151;
+  color: #ffffff;
+  border-color: #b91c1c;
+}
+
+.delete-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+@media (max-width: 768px) {
+  .header-left {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+}

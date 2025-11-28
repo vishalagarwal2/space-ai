@@ -1,0 +1,73 @@
+.content-idea-card {
+  background: #f3f4f6;
+  padding: 1.5rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  border: 2px solid #f3f4f6;
+}
+
+.content-idea-card:hover {
+  background: #e5e7eb;
+}
+
+.content-idea-card.selected {
+  background: #313131;
+}
+
+.idea-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.idea-date-badge {
+  font-family: "Geist Medium";
+  font-weight: 500;
+  font-size: 0.875rem;
+  color: #374151;
+}
+
+.idea-date-badge.selected {
+  color: #ffffff;
+}
+
+.idea-type-badge {
+  font-family: "Geist Regular";
+  letter-spacing: 0.5px;
+  padding: 0.25rem 0.75rem;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #1a1a1a;
+}
+
+.idea-content {
+  color: #1a1a1a;
+  font-weight: 500;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.idea-title {
+  font-family: "Geist Regular";
+  letter-spacing: 0.5px;
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #111827;
+  margin: 0;
+  flex: 1;
+}
+
+.idea-title.selected {
+  color: #ffffff;
+}
+
+.idea-status-badge {
+  padding: 0.25rem 0.75rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  white-space: nowrap;
+}

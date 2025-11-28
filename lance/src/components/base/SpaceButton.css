@@ -1,0 +1,65 @@
+.space-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  background: #fff;
+  font-family: "Neue Montreal Medium";
+  color: #ff2e00;
+  border: 1.2px solid #ff2e00;
+  padding-top: 0.6rem;
+  padding-bottom: 0.6rem;
+  padding-left: 1.8rem;
+  padding-right: 1.8rem;
+  font-size: 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.space-button:hover:not(.disabled) {
+  color: #fff;
+  background-color: #ff2e00;
+}
+
+.space-button.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.space-button.neutral {
+  background-color: transparent;
+  color: #1a1a1a;
+  border: 1.2px solid #1a1a1a;
+}
+
+.space-button.neutral:hover:not(.disabled) {
+  color: #fff;
+  background-color: #1a1a1a;
+  border: 1.2px solid #1a1a1a;
+}
+
+.space-button.delete {
+  background-color: transparent;
+  color: #ef4444;
+  border: 1.2px solid #dc2626;
+}
+
+.space-button.delete:hover:not(.disabled) {
+  color: #fff;
+  background-color: #ef4444;
+  border: 1.2px solid #dc2626;
+}
+
+.space-button.approve {
+  background-color: transparent;
+  color: #0dd254;
+  border: 1.2px solid #0dd254;
+}
+
+.space-button.approve:hover:not(.disabled) {
+  color: #fff;
+  background-color: #0dd254;
+  border: 1.2px solid #0dd254;
+}

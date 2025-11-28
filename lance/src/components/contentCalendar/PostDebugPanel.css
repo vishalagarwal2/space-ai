@@ -1,0 +1,128 @@
+.debug-section {
+  margin: 16px 0;
+  border-top: 1px solid #e5e7eb;
+  padding-top: 16px;
+}
+
+.debug-toggle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  user-select: none;
+}
+
+.debug-toggle input[type="checkbox"] {
+  margin: 0;
+}
+
+.debug-panel {
+  margin-top: 16px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 16px;
+  font-size: 12px;
+}
+
+.debug-section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.debug-section-header h4 {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 600;
+  color: #1e293b;
+}
+
+.debug-status-success {
+  color: #059669;
+  font-weight: 500;
+  font-size: 12px;
+}
+
+.debug-status-error {
+  color: #dc2626;
+  font-weight: 500;
+  font-size: 12px;
+}
+
+.debug-tabs details {
+  margin-bottom: 8px;
+  border: 1px solid #e2e8f0;
+  border-radius: 4px;
+  background: white;
+}
+
+.debug-tabs summary {
+  padding: 8px 12px;
+  background: #f1f5f9;
+  cursor: pointer;
+  font-weight: 500;
+  border-radius: 4px 4px 0 0;
+  user-select: none;
+}
+
+.debug-tabs summary:hover {
+  background: #e2e8f0;
+}
+
+.debug-tabs summary.debug-error {
+  background: #fee2e2;
+  color: #dc2626;
+}
+
+.debug-tabs summary.debug-error:hover {
+  background: #fecaca;
+}
+
+.debug-content {
+  padding: 12px;
+  margin: 0;
+  background: #ffffff;
+  border: none;
+  font-family: "Monaco", "Menlo", "Ubuntu Mono", monospace;
+  font-size: 11px;
+  line-height: 1.4;
+  white-space: pre-wrap;
+  overflow-x: auto;
+  color: #334155;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.debug-error-content {
+  background: #fef2f2;
+  color: #991b1b;
+}
+
+.debug-steps {
+  margin: 0;
+  padding: 12px 12px 12px 24px;
+  background: white;
+  color: #334155;
+}
+
+.debug-steps li {
+  margin-bottom: 4px;
+  font-size: 11px;
+}
+
+.debug-not-available {
+  margin-top: 8px;
+  padding: 8px 12px;
+  background: #fef3cd;
+  border: 1px solid #f59e0b;
+  border-radius: 4px;
+  color: #92400e;
+  font-size: 12px;
+  margin: 0;
+}

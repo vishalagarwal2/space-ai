@@ -1,0 +1,46 @@
+.space-form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+}
+
+.space-form-label {
+  font-family: "Neue Montreal Medium";
+  letter-spacing: 0.5px;
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: #535353;
+}
+
+.space-form-helper-text {
+  font-size: 0.75rem;
+  color: #9ca3af;
+  margin-top: -0.5rem;
+}
+
+.space-form-input {
+  background: transparent;
+  font-family: "Neue Montreal Regular" !important;
+  letter-spacing: 0.5px !important;
+  border: 1.1px solid #4b5563;
+  border-radius: 0.375rem;
+  padding: 1.5rem 1.5rem;
+  font-size: 1.1rem;
+  color: #1a1a1a;
+  transition: all 0.2s;
+}
+
+.space-form-input::selection {
+  background-color: #1a1a1a;
+  color: #fff;
+}
+
+.space-form-input:focus {
+  outline: none;
+  border-color: #ff2e01;
+  box-shadow: 0 0 0 3px rgba(255, 46, 1, 0.1);
+}
+
+.space-form-input::placeholder {
+  color: #6b7280;
+}

@@ -1,0 +1,36 @@
+.space-color-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+}
+
+.space-color-input-wrapper {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.space-color-picker {
+  width: 50px;
+  height: 56px; /* Match input height */
+  border: 1.1px solid #4b5563;
+  border-radius: 0.375rem;
+  cursor: pointer;
+  background: transparent;
+  transition: all 0.2s;
+}
+
+.space-color-picker:focus {
+  outline: none;
+  border-color: #ff2e01;
+  box-shadow: 0 0 0 3px rgba(255, 46, 1, 0.1);
+}
+
+.space-color-picker::-webkit-color-swatch-wrapper {
+  padding: 2px;
+}
+
+.space-color-picker::-webkit-color-swatch {
+  border: none;
+  border-radius: 0.25rem;
+}

@@ -1,0 +1,13 @@
+.tab-title {
+  font-family: "Neue Montreal Medium" !important;
+  font-weight: 500 !important;
+  color: #000 !important;
+  margin: 0 !important;
+  line-height: 1.2;
+}
+
+@media (max-width: 768px) {
+  .tab-title {
+    font-size: 1.5rem !important;
+  }
+}

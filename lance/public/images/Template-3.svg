@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="589px" height="729px" viewBox="0 0 589 729" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Artboard Copy</title>
+    <defs>
+        <radialGradient cx="50%" cy="50%" fx="50%" fy="50%" r="69.4878475%" gradientTransform="translate(0.500000,0.500000),scale(1.000000,0.807956),rotate(90.000000),translate(-0.500000,-0.500000)" id="radialGradient-1">
+            <stop stop-color="#FFFFFF" offset="0%"></stop>
+            <stop stop-color="#45B549" offset="100%"></stop>
+        </radialGradient>
+    </defs>
+    <g id="Artboard-Copy" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect id="Rectangle-Copy-5" fill="url(#radialGradient-1)" x="-0.0380592229" y="-0.0380592229" width="589" height="729"></rect>
+        <rect id="Rectangle" fill="#F4F9F4" x="26" y="26" width="537" height="677" rx="11"></rect>
+    </g>
+</svg>

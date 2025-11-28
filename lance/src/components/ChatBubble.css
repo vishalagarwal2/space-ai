@@ -1,0 +1,148 @@
+.chat-bubble {
+  gap: 0.75rem;
+  max-width: 80%;
+}
+
+.chat-bubble.user {
+  align-self: flex-end;
+  max-width: 30%;
+  flex-direction: row-reverse;
+}
+
+.chat-bubble.assistant {
+  align-self: flex-start;
+  max-width: 80%;
+}
+
+.bubble-avatar {
+  flex-shrink: 0;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.assistant-avatar {
+  width: 32px;
+  height: 32px;
+  background: linear-gradient(
+    45deg,
+    #f09433 0%,
+    #e6683c 25%,
+    #dc2743 50%,
+    #cc2366 75%,
+    #bc1888 100%
+  );
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.user-avatar {
+  width: 32px;
+  height: 32px;
+  background: #e2e8f0;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #64748b;
+}
+
+.bubble-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.bubble-message {
+  position: relative;
+}
+
+.chat-bubble.assistant .bubble-message {
+  background: none;
+  border: none;
+  padding: 0.75rem 0;
+}
+
+.chat-bubble.assistant .bubble-message p {
+  margin: 0 0 0.5rem 0;
+  line-height: 1.5;
+  word-wrap: break-word;
+  color: #1e293b;
+  font-size: 1.1rem;
+}
+
+.chat-bubble.assistant .bubble-message p:last-child {
+  margin-bottom: 0;
+}
+
+.chat-bubble.user .bubble-message {
+  background: #212121;
+  border-radius: 17px;
+  padding: 0.75rem 1rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.chat-bubble.user .bubble-message p {
+  margin: 0 0 0.5rem 0;
+  line-height: 1.5;
+  word-wrap: break-word;
+  color: #ffffff;
+  font-size: 1rem;
+}
+
+.chat-bubble.user .bubble-message p:last-child {
+  margin-bottom: 0;
+}
+
+.bubble-time {
+  font-size: 0.75rem;
+  opacity: 0.7;
+  display: block;
+  margin-top: 0.25rem;
+}
+
+.typing-indicator {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 0.5rem 0;
+}
+
+.typing-indicator span {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #64748b;
+  animation: typing 1.4s infinite ease-in-out;
+}
+
+.typing-indicator span:nth-child(1) {
+  animation-delay: -0.32s;
+}
+
+.typing-indicator span:nth-child(2) {
+  animation-delay: -0.16s;
+}
+
+@keyframes typing {
+  0%,
+  80%,
+  100% {
+    transform: scale(0.8);
+    opacity: 0.5;
+  }
+  40% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .chat-bubble {
+    max-width: 90%;
+  }
+}

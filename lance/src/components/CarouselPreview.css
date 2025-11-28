@@ -1,0 +1,175 @@
+.carousel-preview {
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.carousel-container {
+  position: relative;
+  width: 100%;
+  background: #ffffff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.carousel-slide-wrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1;
+  overflow: hidden;
+}
+
+.carousel-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 20;
+  background: rgba(255, 255, 255, 0.95);
+  border: 2px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #1f2937;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.carousel-nav:hover {
+  background: rgba(255, 255, 255, 1);
+  border-color: rgba(0, 0, 0, 0.2);
+  transform: translateY(-50%) scale(1.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.carousel-nav:active {
+  transform: translateY(-50%) scale(0.95);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
+}
+
+.carousel-nav svg {
+  width: 20px;
+  height: 20px;
+  stroke-width: 2.5;
+}
+
+.carousel-nav-prev {
+  left: 12px;
+}
+
+.carousel-nav-next {
+  right: 12px;
+}
+
+.carousel-preview:has(.carousel-slide-wrapper:only-child) .carousel-nav {
+  display: none;
+}
+
+.carousel-indicators {
+  position: absolute;
+  bottom: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+  z-index: 10;
+}
+
+.carousel-indicator {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  backdrop-filter: blur(4px);
+}
+
+.carousel-indicator:hover {
+  background: rgba(255, 255, 255, 0.7);
+  transform: scale(1.2);
+}
+
+.carousel-indicator.active {
+  background: rgba(255, 255, 255, 1);
+  transform: scale(1.3);
+}
+
+.carousel-counter {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 500;
+  z-index: 10;
+  backdrop-filter: blur(4px);
+}
+
+@media (max-width: 768px) {
+  .carousel-nav {
+    width: 36px;
+    height: 36px;
+  }
+
+  .carousel-nav-prev {
+    left: 8px;
+  }
+
+  .carousel-nav-next {
+    right: 8px;
+  }
+
+  .carousel-indicators {
+    bottom: 12px;
+  }
+
+  .carousel-counter {
+    top: 12px;
+    right: 12px;
+    font-size: 11px;
+  }
+}
+
+.carousel-slide-wrapper .post-renderer-wrapper {
+  transition: opacity 0.3s ease;
+}
+
+.carousel-nav:focus,
+.carousel-indicator:focus {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
+}
+
+.carousel-slide-wrapper.loading {
+  background: #f3f4f6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel-slide-wrapper.loading::after {
+  content: "";
+  width: 32px;
+  height: 32px;
+  border: 3px solid #e5e7eb;
+  border-top-color: #3b82f6;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}

@@ -1,0 +1,133 @@
+.business-signup-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: #fff;
+  padding: 2rem;
+  font-family: "Geist Regular", sans-serif;
+}
+
+.business-signup-content {
+  width: 100%;
+  max-width: 500px;
+}
+
+.business-signup-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 1.65rem;
+  margin-bottom: 3rem;
+}
+
+.business-signup-brand {
+  font-family: "Neue Montreal Regular";
+  font-size: 1.65rem;
+  font-weight: 500;
+  color: #ff2e01;
+}
+
+.business-signup-form-wrapper {
+  background: transparent;
+}
+
+.business-signup-title {
+  font-size: 2.2rem;
+  font-weight: 500;
+  color: #1a1a1a;
+}
+
+.business-signup-subtitle {
+  font-family: "Neue Montreal Regular";
+  font-size: 1.1rem;
+  letter-spacing: 0.5px;
+  color: #9ca3af;
+  margin-bottom: 2rem;
+}
+
+.business-signup-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.business-signup-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.business-signup-label {
+  font-size: 0.9625rem;
+  font-weight: 500;
+  color: #1a1a1a;
+}
+
+.business-signup-input {
+  background: transparent;
+  border: 1.1px solid #4b5563;
+  border-radius: 0.375rem;
+  padding: 1.5rem 1.5rem;
+  font-size: 1.1rem;
+  color: #1a1a1a;
+  transition: all 0.2s;
+}
+
+.business-signup-input::selection {
+  background-color: #1a1a1a;
+  color: #fff;
+}
+
+.business-signup-input:focus {
+  outline: none;
+  border-color: #ff2e01;
+  box-shadow: 0 0 0 3px rgba(255, 46, 1, 0.1);
+}
+
+.business-signup-input::placeholder {
+  color: #6b7280;
+}
+
+.business-signup-error {
+  background: rgba(239, 68, 68, 0.1);
+  border: 1px solid #ef4444;
+  color: #fca5a5;
+  padding: 0.75rem;
+  border-radius: 0.375rem;
+  font-size: 0.9625rem;
+}
+
+.business-signup-footer {
+  font-family: "Neue Montreal Regular";
+  letter-spacing: 0.5px;
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 0.9625rem;
+  color: #9ca3af;
+}
+
+.business-signup-link {
+  color: #ff2e01;
+  text-decoration: underline;
+  font-weight: 500;
+}
+
+.business-signup-link:hover {
+  color: #ff2e01;
+}
+
+/* Responsive design */
+@media (max-width: 640px) {
+  .business-signup-container {
+    padding: 1rem;
+  }
+
+  .business-signup-title {
+    font-size: 1.65rem;
+  }
+
+  .business-signup-button {
+    width: 100%;
+  }
+}
